@@ -1,0 +1,23 @@
+---
+question: |
+  What is your name?
+fields: 
+  - Name: user_name
+---
+code: |
+  if user_name.lower() == "scotty":
+    secret_message = "Beam me up, Scotty"
+  elif user_name == "Spock":
+    secret_message = "Live long and prosper."
+  else:
+    secret_message = "You're not Scotty or Spock"
+---
+question: |
+  Hello ${ user_name } !
+
+subquestion: |
+  It is a longer text
+  There are multiple lines
+  
+  ${ secret_message } 
+mandatory: True
